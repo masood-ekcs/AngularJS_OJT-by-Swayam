@@ -1,0 +1,9 @@
+<h2>Table of {{inputNumber}}</h2>
+<div>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" [(ngModel)]="inputNumber" (ngModelChange)="generateTable()" />
+</div>
+
+<div *ngFor="let i of numbers">
+    <div>{{inputNumber}} x {{i}} = {{inputNumber * i}}</div>
+</div>

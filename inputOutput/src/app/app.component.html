@@ -1,0 +1,9 @@
+<!-- <app-form></app-form>
+<app-button (addBtnClicked)="logConsole($event)"></app-button> -->
+
+
+
+<button (click)="prevPage()" *ngIf="prevButton">Previous</button>
+<button (click)="nextPage()" *ngIf="nextButton">Next</button>
+<br>
+<h1>{{numberOfPages[pageNum]}}</h1>

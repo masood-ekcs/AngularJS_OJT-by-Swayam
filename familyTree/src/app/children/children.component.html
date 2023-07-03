@@ -1,0 +1,9 @@
+<!-- <p>{{childrenDetails.name}}</p>
+<p>Age: {{childrenDetails.age}}</p> -->
+
+<p (click)="showChildDetails()"><strong>{{ childrenDetails.name }}</strong></p>
+<div *ngIf="showDetails">
+    <p>Name: {{ childrenDetails.name }}</p>
+    <p>Age: {{ childrenDetails.age }}</p>
+    <p>Image: <img [src]="childrenDetails.imageSRC" /></p>
+</div>

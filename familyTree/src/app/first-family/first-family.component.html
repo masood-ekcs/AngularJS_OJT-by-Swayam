@@ -1,0 +1,36 @@
+<!-- <hr>
+<h2>Son's Name: {{sonDetails.son.firstName}} {{sonDetails.son.lastName}}</h2>
+
+<h4>Children:</h4>
+<ul>
+    <li *ngFor="let arr2 of sonDetails.children">
+        <app-children [childrenDetails]="arr2"></app-children>
+    </li>
+</ul> -->
+
+<!-- <hr>
+<h2 (click)="toggleChildren()">{{ sonDetails.son.firstName }}</h2>
+
+<ul *ngIf="showChildren">
+    <li *ngFor="let child of sonDetails.children">
+        <app-children [childrenDetails]="child"></app-children>
+    </li>
+</ul> -->
+
+
+<hr>
+<h2 (click)="toggleChildren()">{{ sonDetails.son.firstName }}</h2>
+
+<ul *ngIf="showChildren">
+    <li (click)="showAllChildren()">All</li>
+    <div *ngIf="showAll">
+        <ul>
+            <li *ngFor="let child of sonDetails.children">
+                <app-children [childrenDetails]="child"></app-children>
+            </li>
+        </ul>
+    </div>
+    <li (click)="showChildDetails(child)" *ngFor="let child of sonDetails.children">
+        <app-children [childrenDetails]="child"></app-children>
+    </li>
+</ul>

@@ -1,0 +1,41 @@
+<label class="form-label fw-500 text-body mb-1">{{ aiTemplateLabel }}</label>
+<div class="tom-select-custom" (click)="selectTheme()">
+    <select class="js-select form-select form-select-sm tomselected" autocomplete="off" data-hs-tom-select-options="{
+    'placeholder': 'Select',
+    'hideSearch': true,
+    'searchInDropdown':false
+  }" id="tomselect-2" tabindex="-1" hidden="hidden">
+        <option value="4" selected="true">{{ aiThemeOptionDefault }}</option>
+        <option value="">Select</option>
+
+        <option value="1">{{ aiThemeOption1 }}</option>
+        <option value="3">{{ aiThemeOption3 }}</option>
+        <option value="5">{{ aiThemeOption5 }}</option>
+    </select>
+    <div
+        class="ts-control js-select form-select form-select-sm single plugin-change_listener plugin-hs_smart_position input-hidden">
+        <div class="items ts-input full has-items">
+            <div data-value="4" class="item">{{ aiThemeOptionDefault }}</div>
+        </div>
+        <div class="tom-select-custom">
+            <div class="ts-dropdown single js-select form-select form-select-sm plugin-change_listener plugin-hs_smart_position"
+                style="display: none; visibility: visible; opacity: 1">
+                <div role="listbox" id="tomselect-2-ts-dropdown" tabindex="-1" class="ts-dropdown-content">
+                    <div data-selectable="" data-value="4" class="option selected active" role="option"
+                        id="tomselect-2-opt-1" aria-selected="true">
+                        {{ aiThemeOptionDefault }}
+                    </div>
+                    <div data-selectable="" data-value="1" class="option" role="option" id="tomselect-2-opt-2">
+                        {{ aiThemeOption1 }}
+                    </div>
+                    <div data-selectable="" data-value="3" class="option" role="option" id="tomselect-2-opt-3">
+                        {{ aiThemeOption3 }}
+                    </div>
+                    <div data-selectable="" data-value="5" class="option" role="option" id="tomselect-2-opt-4">
+                        {{ aiThemeOption5 }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

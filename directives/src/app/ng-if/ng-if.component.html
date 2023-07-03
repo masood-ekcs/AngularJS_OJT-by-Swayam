@@ -1,0 +1,32 @@
+<form *ngIf="displayForm">
+    <label>Name: </label>
+    <input type="text" placeholder="Name">
+    <br>
+    <label for="">Age:</label>
+    <input type="text" placeholder="Age" #userAge>
+    <br>
+    <button (click)="login(userAge.value)">Login</button>
+</form>
+
+<!--This will show when the user is above 13-->
+<div *ngIf="ageGreater">
+    <h1>Greater than 13</h1>
+</div>
+
+<!--This will show when the user us below 13-->
+<div *ngIf="ageSmaller">
+    <h1>Smaller than 13</h1>
+    <button (click)="editInfo()">Edit your information</button>
+</div>
+
+<!--This will show an error incase the age is empty-->
+<div *ngIf="ageErrorInput">
+    <h1>Error!</h1>
+    <button (click)="ageError()">Go Back</button>
+</div>
+
+
+<div *ngIf="demoFunction()">
+    <!-- we can also pass a function in NGIF -->
+    <h1>Testing the Demo Function</h1>
+</div>
