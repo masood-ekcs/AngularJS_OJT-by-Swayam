@@ -1,0 +1,14 @@
+<h2 style="color: red;"><i>ng-for-normal</i></h2>
+
+<div class="emp" *ngFor="let nameArray of data">
+    <h6>Name : {{nameArray.empName}}, ID : {{nameArray.empId}}, Age: {{nameArray.empAge}}</h6>
+
+    <!-- <div *ngFor="let comicArray of nameArray.comicActors">
+        <h6>Comic Actor : {{comicArray.nameComedian}}, Age: {{comicArray.age}}</h6>
+    </div> -->
+</div>
+
+
+<!-- <div class="emp" *ngFor="let comicArray of data[0].comicActors">
+    <h6>Comic Actor : {{comicArray.nameComedian}}</h6>
+</div> -->

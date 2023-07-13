@@ -1,0 +1,35 @@
+<!-- navbar -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white;">TextInfo</a>
+    <!-- <button class="btn btn-outline-success" type="submit">About Us</button> -->
+  </div>
+</nav>
+
+<!-- textarea -->
+<div>
+  <textarea class="text-area" placeholder="Please Enter Your Text Here..." id="floatingTextarea" #userText
+    (input)="countCharLength(userText)" (input)="countWordLength(userText)"
+    (input)="countCharWithoutSpacesLength(userText)"></textarea>
+</div>
+
+<!-- buttons -->
+<div class="btnFlex">
+  <button class="btn btn-outline-danger btn-sm" (click)="capText(userText)">Capitalize All Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="lowerText(userText)">Lower All Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="firstCharCap(userText)">First Character Capital</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="copyText(userText)">Copy Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countCharLength(userText)">Character Count (with Spaces):
+    {{characterCount}}</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countCharWithoutSpacesLength(userText)">Character Count (w/o
+    Spaces):
+    {{characterCountWithoutSpaces}}</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countWordLength(userText)">Word Count: {{wordCount}}</button>
+
+</div>

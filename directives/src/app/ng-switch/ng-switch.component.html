@@ -1,3 +1,4 @@
+<h2 style="color: red;"><i>ng-switch</i></h2>
 <div [ngSwitch]="pageNumber">
     <h3>Page Number : {{ pageNumber }}</h3>
 
@@ -17,5 +18,6 @@
         <h1>Error ran out of pages :(</h1>
     </div>
 </div>
-<button (click)="dec()">Previous Page</button>
+
+<button (click)="dec()">Previous Page</button>&nbsp;
 <button (click)="inc()">Next Page</button>

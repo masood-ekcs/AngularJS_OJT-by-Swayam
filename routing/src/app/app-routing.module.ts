@@ -8,11 +8,10 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'brand', component: BrandComponent },
   { path: 'text', component: TextComponent },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

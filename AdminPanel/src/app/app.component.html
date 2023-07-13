@@ -1,0 +1,65 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" (click)="goBack()">Admin Panel – BASIC (without Components)</a>
+        <!-- <form class="d-flex"> -->
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+        <!-- </form> -->
+    </div>
+</nav>
+
+<div class="btn1" *ngIf="displayButtons">
+    <button type="button" (click)="addNewEmployee()" class="btn btn-light">Add New Employee</button>
+    <button type="button" (click)="checkCurrentEmployee()" class="btn btn-light">Check Current Employee</button>
+</div>
+
+
+<!-- Add New Employee Form -->
+<!-- name, profile-image, job-title  -->
+<form *ngIf="displayEmpForm" class="form1">
+    <div class="mb-3">
+        <label class="form-label">Employee Name</label>
+        <input type="text" class="form-control" #userName>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Profile Image</label>
+        <input type="text" class="form-control" #userImage>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Job Title</label>
+        <input type="text" class="form-control" #userJobTitle>
+    </div>
+
+    <button type="submit" (click)="addNewEmployeeDetails(userName.value, userImage.value, userJobTitle.value)"
+        class="btn btn-primary">Submit</button>
+</form>
+
+<div *ngIf="displayCard">
+    <!-- <div *ngFor="let empData of display5Cards"> -->
+    <div *ngFor="let empData of employeeDetails">
+        <div class="card" style="width: 18rem;">
+            <img [src]="empData.empImage" class="card-img-top" alt="…">
+            <div class="card-body">
+                <!-- <h5 class="card-title">{{employeeDetails[0].empName}}</h5> -->
+                <h5 class="card-title">{{empData.empName}}</h5>
+                <p class="card-text">{{empData.empTitle}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Images: -->
+<!-- https://plus.unsplash.com/premium_photo-1669782051602-224c77ca121c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80 -->
+
+<!-- https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80 -->
+
+<!-- 
+<div *ngFor="let i of Arr(num).fill(5)">
+    <H1>Hello World!</H1>
+</div> -->
+
+
+
+<div *ngIf="!displayButtons">
+    <button type="button" (click)="goBack()" class="btn btn-light">Back</button>
+</div>

@@ -1,0 +1,9 @@
+<div *ngFor="let empData of empData">
+    <div class="card cardMargin" style="width: 16rem;">
+        <img [src]="empData.userImage" class="card-img-top" alt="…">
+        <div class="card-body">
+            <h3 class="card-title">{{empData.userName}}</h3>
+            <small class="card-text">{{empData.userJobTitle}}</small>
+        </div>
+    </div>
+</div>

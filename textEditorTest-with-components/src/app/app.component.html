@@ -1,0 +1,29 @@
+<!-- navbar -->
+<app-navbar></app-navbar>
+
+<!-- textarea -->
+<!-- <app-textarea></app-textarea> -->
+<div>
+  <textarea class="text-area" placeholder="Please Enter Your Text Here..." id="floatingTextarea" #userText
+    (input)="countCharLength(userText)" (input)="countWordLength(userText)"></textarea>
+</div>
+
+<!-- buttons -->
+<div class="btnFlex">
+  <ng-container *ngFor="let buttonArray of buttonInfo">
+    <app-buttons-all [buttonsList]="buttonArray" [buttonsLabel]="buttonArray.buttonName"></app-buttons-all>
+  </ng-container>
+</div>
+
+<!-- OR -->
+<!-- <app-buttons-all></app-buttons-all> -->
+
+<div class="btnFlex">
+  <button class="btn btn-outline-danger btn-sm" (click)="capText(userText)">Capitalize All Text</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="lowerText(userText)">Lower All Text</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="firstCharCap(userText)">First Character Capital</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="copyText(userText)">Copy Text</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="countCharLength(userText)">Character Count:
+    {{characterCount}}</button>
+  <button class="btn btn-outline-danger btn-sm" (click)="countWordLength(userText)">Word Count: {{wordCount}}</button>
+</div>
