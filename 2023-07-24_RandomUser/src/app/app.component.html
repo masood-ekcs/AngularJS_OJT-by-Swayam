@@ -1,12 +1,25 @@
 <nav class="navbar navbar-light bg-dark" style="margin-bottom: 20px;">
   <div class="container-fluid ">
-    <h3><a class="navbar-brand" style="color: white;">My Users' Data</a></h3>
-    <!-- <button class="btn btn-primary">Get</button> -->
+    <h1><a class="navbar-brand" style="color: white;">Random User</a></h1>
   </div>
 </nav>
 
+<!-- <button (click)="getData()" class="btn btn-primary">Get Data</button> -->
+
+<!-- <h1>Name:</h1> -->
+
+<div *ngFor="let apiResults of randomApiData">
+  First Name: {{apiResults.name.first}} <br>
+  Last Name: {{apiResults.name.last}} <br>
+  Email: {{apiResults.email}} <br>
+  Birthday: {{apiResults.dob.date}} <br>
+  Age: {{apiResults.dob.age}} <br>
+  Gender: {{apiResults.gender}} <br>
+  <img [src]="apiResults.picture.large" alt="">
+
+</div>
+
 <div style="text-align: center;">
-  <h1>Random User</h1>
   <div class="col-lg-4" style="margin: auto;">
     <svg style="margin: 20px auto;" class="bd-placeholder-img rounded-circle" width="200" height="200"
       xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
@@ -18,7 +31,8 @@
     <div style="margin: 10px auto">
       <button class="btn btn-secondary" onclick="showName()" id="showName" style="display: inline;">Show
         Name</button>&nbsp;
-      <button class="btn btn-secondary" onclick="hideName()" id="hideName" style="display: none;">Hide Name</button><br>
+      <button class="btn btn-secondary" onclick="hideName()" id="hideName" style="display: none;">Hide
+        Name</button><br>
       <h3 id="myName" class="fw-normal" style="display: none;">myFullName</h3>
     </div>
 
