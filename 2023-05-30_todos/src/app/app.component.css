@@ -1,0 +1,26 @@
+.todoList {
+    width: 400px;
+    height: auto;
+    padding: 10px 20px;
+    background-color: rgb(205, 205, 98);
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todoItem {
+    font-size: 24px;
+    display: inline-block;
+}
+
+form {
+    text-align: center;
+    /* padding: 10px 20px; */
+    margin: 10px 20px;
+
+}
+
+h1 {
+    text-align: center;
+}

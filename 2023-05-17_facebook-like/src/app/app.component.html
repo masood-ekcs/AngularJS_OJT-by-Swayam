@@ -1,0 +1,19 @@
+<form>
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input type="text" class="form-control" #title> <!-- # is similar to getElementById.value in HTML -->
+
+  </div>
+  <div class="mb-3">
+    <label for="link" class="form-label">Link</label>
+    <input type="text" class="form-control" #link>
+  </div>
+
+  <button (click)="createPost(title,link)" type="submit" class="btn btn-primary">Submit</button>
+  <!-- the submit button will execute the createPost function which will display a card below it -->
+</form>
+
+<div *ngFor="let post of sortArray()">
+
+  <app-post [newPost]="post"> </app-post>
+</div>

@@ -1,0 +1,27 @@
+<nav style="--bs-breadcrumb-divider: '|' " aria-label="breadcrumb">
+  <ol class="breadcrumb">
+
+    <!-- // static vaxlues -->
+    <!-- <li class="breadcrumb-item">
+      <a href="/">Home | </a>
+      <a href="/brand">Brand | </a>
+      <a href="/text">Text | </a> -->
+
+    <!-- dynamic values using the ForLoop -->
+    <li class="breadcrumb-item" *ngFor="let arr of breadCrumbsInfo">
+
+      <!-- <a [href]="arr.link">{{arr.label}}</a> -->
+      <!-- the above line will not work if we're using routing, 
+        so we have to use [routerLink] method -->
+
+      <a [routerLink]="arr.link">{{arr.label}}</a>
+      <!-- [routerLink] –> do not refreshes a page and is used in place of href when using routes -->
+    </li>
+  </ol>
+
+  <div>
+    <button class="btn btn-secondary">Previous</button>
+    <span>&nbsp;</span>
+    <button class="btn btn-secondary">Next</button>
+  </div>
+</nav>

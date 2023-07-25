@@ -1,0 +1,62 @@
+1. OOPs - Object Oriented Programming 
+Abhi tak jo hmne kiya that is called functional programming paradigm ->
+
+
+Dikkat
+a. Code Ko hm reuse nahi kr sakte they jaida
+b. Debug krne mein dikkat hoti hai
+c. Duplicate code ho jaata hai 
+d. organized nahi hota 
+e. Cost of enchancement is high 
+f. Security nahi hoti 
+
+
+OOPs ke aane se ye saara dikkat khatam ho gya 
+
+OOPs ki sabse basic building blocks hoti hai - Classes and Objects
+
+Classes - Matlab blueprint of any real world entity 
+ex - User (properties - name, age, address || methods - getName, setName, getAge, setAge),
+ex - Project (properties - teams, subteams, assests, || getTeam, setTeam, getSubteam)
+
+
+Object - Objects are instances of the class. 
+Ex - Jaisey ki hmare class ka naam hai User
+user1 is an instance of class User
+user1.name
+user1.age,
+user1.address
+let name = user1.getName()
+user1.setName("Lol")
+
+
+
+user1 is a type of varible (object of class User) 
+Jab bhi koi programm run hota hai, toh uske jo bhi varibles hote hai wo ram mein aa jaate hai. 
+
+let a = 10
+console.log(a)
+{ javascript/script.js | a | 78967}
+[][][][][][]
+
+Ram mein varibles aate hai aur object hai User class ka wo ram mein jagah lega
+
+Note - class ke andar ek function hota hai jisko constructor, aap jab bhi ek particular class ka object banate ho toh, ye jo constructor function wo call ho jaata hai
+
+
+
+
+
+
+OOPs - Inheritance, Polymorphism, Abstraction, Encapsulation
+Inheritance - Aapne apne company mein user naam ka class banaya (property - name, address, age), ek class sales_employee type ka class hai (kisi bhi sales_employee name, address, age, target)
+
+Toh Inheritance bolta hai ki aap ek parent class aur ek child class, toh is case mein parent class user ho sakta hai aur child class sales_employee hoga, toh parent class ki saari property aur methods wahan se aa jaayenge
+
+
+Polymorphism - (Poly - bahut Morph - Form) - function ka naam ek hi daalo, par usme parameter different type ke, different number of parameter, toh wo run hone time decide ho jaayega ki kaun sa function run krna hai
+
+
+Abstraction - Data hiding - Kuch kuch fields ko hide kr sakte ho (kuch kuch property ko) user mein ek account balance type ka property hai, toh user1.account_balance type ki cheez krke aap usko access nahi kr sakte
+
+Encapsulation - Data binding - Ek class se related jo bhi properties aur methods usko ek class mein daal do

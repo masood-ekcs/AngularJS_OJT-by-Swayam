@@ -1,0 +1,43 @@
+<!-- navbar -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color: white;">TextInfo</a>
+    <!-- <button class="btn btn-outline-success" type="submit">About Us</button> -->
+  </div>
+</nav>
+
+<!-- textarea -->
+<div>
+  <textarea [value]="this.eValue" class="text-area" placeholder="Please Enter Your Text Here..." id="floatingTextarea"
+    #userText (input)="inputEvalue(userText)" (input)="outputEvalue()" (input)="countCharLength()"
+    (input)="countCharWithoutSpacesLength()" (input)="countWordLength()"></textarea>
+  <!-- inputEvalue function will take the input from the user and send it to .ts file -->
+  <!-- outputEvalue is the final value coming after execution of functions -->
+</div>
+
+<!-- buttons -->
+<div class="btnFlex">
+  <button class="btn btn-outline-danger btn-sm" (click)="capText()">Capitalize All Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="lowerText()">Lower All Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="firstCharCap()">First Character Capital</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="copyText()">Copy Text</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="pasteText()">Paste Text</button>
+
+</div>
+
+<div class="btnFlex">
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countCharLength()">Character Count (+Spaces):
+    {{this.serviceData.characterCount}}</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countCharWithoutSpacesLength()">Character Count (-Spaces):
+    {{this.serviceData.characterCountWithoutSpaces}}</button>
+
+  <button class="btn btn-outline-danger btn-sm" (click)="countWordLength()">Word Count:
+    {{this.serviceData.wordCount}}</button>
+
+</div>

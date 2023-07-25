@@ -1,0 +1,21 @@
+<div class="btnFlex">
+    <button class="btn btn-outline-danger btn-sm" (click)="capText()">Capitalize All Text</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="lowerText()">Lower All Text</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="firstCharCap()">First Character Capital</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="copyText()">Copy Text</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="pasteText()">Paste Text</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="countCharLength()">Character Count
+        (+Spaces):{{this.serviceData.characterCount}}</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="countCharWithoutSpacesLength()">Character Count
+        (-Spaces):{{this.serviceData.characterCountWithoutSpaces}}</button>
+
+    <button class="btn btn-outline-danger btn-sm" (click)="countWordLength()">Word
+        Count:{{this.serviceData.wordCount}}</button>
+
+</div>

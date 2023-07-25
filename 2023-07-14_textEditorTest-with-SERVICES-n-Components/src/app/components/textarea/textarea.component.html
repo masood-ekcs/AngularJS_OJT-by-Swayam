@@ -1,0 +1,6 @@
+<!-- textarea -->
+<div>
+    <textarea [value]="this.serviceData.userInputVariable" class="text-area"
+        placeholder="Please Enter Your Text Here..." id="floatingTextarea" #userText (input)="inputEvalue(userText)"
+        (input)="countCharLength()" (input)="countCharWithoutSpacesLength()" (input)="countWordLength()"></textarea>
+</div>

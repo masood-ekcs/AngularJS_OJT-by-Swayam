@@ -1,0 +1,13 @@
+<h1>My To Do List</h1>
+<form>
+  <input type="text" size="30" placeholder="Enter task" #task />&nbsp;
+  <button (click)="createTask(task)" type="submit">Add Task</button>&nbsp;
+  <button (click)="clearTask()">Clear All</button>
+</form>
+
+<div *ngFor="let obj of toDoTasks">
+  <div class="todoList">
+    <h2 class="todoItem">{{ obj.task }}</h2>
+    <button (click)="deleteTask(obj.id)">X</button>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="col-12 col-xl-6">
+  <div class="mb-3" *ngIf="!isInput">
+    <label class="form-label fw-500 text-body mb-1" id="{{id}}">{{name}}</label>
+    <textarea class="form-control form-control-sm" placeholder="This is Text Field" #myInput></textarea>
+  </div>
+
+  <div class="mb-3" *ngIf="isInput">
+    <label class="form-label fw-500 text-body mb-1">{{name}}</label>
+    <input type="text" id="exampleFormControlInput1" class="form-control form-control-sm"
+      placeholder="This is Input Field" style="background-color: aqua;">
+  </div>
+</div>
