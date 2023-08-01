@@ -1,0 +1,7 @@
+<div *ngFor="let apiResults of this.myService.randomApiData" style="text-align: center;">
+
+    <app-image-area [randomOutput]="apiResults"></app-image-area>
+    <app-buttons-area [randomOutput]="apiResults"></app-buttons-area>
+    <app-display-area [randomOutput]="apiResults"></app-display-area>
+
+</div>

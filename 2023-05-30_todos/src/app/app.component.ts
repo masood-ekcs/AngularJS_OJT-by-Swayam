@@ -11,7 +11,7 @@ export class AppComponent {
   toDoTasks: any[] = [];
   deleteId!: any[];
 
-  createTask(task: HTMLInputElement): boolean {
+  addTask(task: HTMLInputElement): boolean {
     // console.log(task.value)
     this.id++;
     this.toDoTasks.push({ id: this.id, task: task.value });
@@ -30,7 +30,7 @@ export class AppComponent {
     return false;
   }
 
-  clearTask(): void {
+  deleteAllTask(): void {
     this.toDoTasks = []; // to clear the array by assigning an empty array
   }
 

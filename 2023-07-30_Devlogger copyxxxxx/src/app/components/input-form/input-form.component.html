@@ -1,0 +1,24 @@
+<!-- <div class="container card card-body my-3 mb-3"> -->
+<div class="card card-body my-3">
+    <form>
+        <!-- <form (submit)="onSubmit()"> -->
+        <div class="form-group mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Input your log" [(ngModel)]="inputLog">
+        </div>
+
+        <!-- This will work with the Submit function created in the form tag     <form (submit)="onSubmit()">     -->
+        <!-- <input type="submit" name="name" value="Add Your Log" class="btn btn-success"> -->
+
+        <button [disabled]="!inputLog" type="submit" class="btn btn-secondary" (click)="addLog()">Add Log</button>
+        &nbsp;
+        <button [hidden]="!inputLog" class="btn btn-warning" (click)="showClearLogButton()">Clear Log</button>
+
+        <!-- This will reset all the input fields within the form -->
+        <!-- <button type="reset" class="btn btn-warning">Clear Log</button> -->
+
+
+        <button [disabled]="!inputLog" type="submit" class="btn btn-secondary float-end"
+            (click)="add2LocalStorage()">Add
+            Log to Local Storage</button>
+    </form>
+</div>

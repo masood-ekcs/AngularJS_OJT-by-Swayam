@@ -1,60 +1,69 @@
 <nav class="navbar navbar-light bg-dark" style="margin-bottom: 20px;">
   <div class="container-fluid ">
-    <h1><a class="navbar-brand" style="color: white;">Random User</a></h1>
+    <h3> <a href="https://randomuser.me/" target="_blank" style="color: white;">Random User</a></h3>
+    <a class="btn btn-outline-secondary" href="https://randomuser.me/api" target="_blank">View details »</a>
   </div>
 </nav>
 
 <!-- <button (click)="getData()" class="btn btn-primary">Get Data</button> -->
 
-<!-- <h1>Name:</h1> -->
+<div *ngFor="let apiResults of randomApiData" style="text-align: center;">
 
-<div *ngFor="let apiResults of randomApiData">
-  First Name: {{apiResults.name.first}} <br>
-  Last Name: {{apiResults.name.last}} <br>
-  Email: {{apiResults.email}} <br>
-  Birthday: {{apiResults.dob.date}} <br>
-  Age: {{apiResults.dob.age}} <br>
-  Gender: {{apiResults.gender}} <br>
-  <img [src]="apiResults.picture.large" alt="">
+  <!-- Show Image -->
+  <img [src]="apiResults.picture.large" style="margin: 20px auto; background-color: gray;"
+    class="bd-placeholder-img rounded-circle" width="300" height="300" alt="">
+  <br>
 
-</div>
+  <!-- Show Name -->
+  <button class="btn btn-outline-secondary" (mouseenter)="showName()" *ngIf="showNameButton">Show Name</button>
+  <button class="btn btn-secondary" (mouseleave)="hideName()" *ngIf="hideNameButton">Hide Name</button>
 
-<div style="text-align: center;">
-  <div class="col-lg-4" style="margin: auto;">
-    <svg style="margin: 20px auto;" class="bd-placeholder-img rounded-circle" width="200" height="200"
-      xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
-      focusable="false">
-      <rect width="100%" height="100%" fill="gray"></rect>
-    </svg>
+  <!-- Show Email -->
+  <button class="btn btn-outline-secondary" (mouseenter)="showEmail()" *ngIf="showEmailButton">Show Email</button>
+  <button class="btn btn-secondary" (mouseleave)="hideEmail()" *ngIf="hideEmailButton">Hide Email</button>
 
+  <!-- Show Birthday -->
+  <button class="btn btn-outline-secondary" (mouseenter)="showBirthday()" *ngIf="showBirthdayButton">Show
+    Birthday</button>
+  <button class="btn btn-secondary" (mouseleave)="hideBirthday()" *ngIf="hideBirthdayButton">Hide
+    Birthday</button>
 
-    <div style="margin: 10px auto">
-      <button class="btn btn-secondary" onclick="showName()" id="showName" style="display: inline;">Show
-        Name</button>&nbsp;
-      <button class="btn btn-secondary" onclick="hideName()" id="hideName" style="display: none;">Hide
-        Name</button><br>
-      <h3 id="myName" class="fw-normal" style="display: none;">myFullName</h3>
-    </div>
-
-    <div style="margin: 10px auto">
-      <button class="btn btn-secondary" onclick="showEmail()" id="showEmail" style="display: inline;">Show
-        Email</button>&nbsp;
-      <button class="btn btn-secondary" onclick="hideEmail()" id="hideEmail" style="display: none;">Hide
-        Email</button><br>
-      <h3 id="myEmail" class="fw-normal" style="display: none;">myEmail</h3>
-    </div>
-
-    <div style="margin: 10px auto">
-      <button class="btn btn-secondary" onclick="showBirthday()" id="showBirthday" style="display: inline;">Show
-        Birthday</button>&nbsp;
-      <button class="btn btn-secondary" onclick="hideBirthday()" id="hideBirthday" style="display: none;">Hide
-        Birthday</button><br>
-      <h3 id="myBirthday" class="fw-normal" style="display: none;">myBirthday</h3>
-    </div>
+  <!-- Show Location -->
+  <button class="btn btn-outline-secondary" (mouseenter)="showLocation()" *ngIf="showLocationButton">Show
+    Location</button>
+  <button class="btn btn-secondary" (mouseleave)="hideLocation()" *ngIf="hideLocationButton">Hide
+    Location</button>
+  <br><br>
 
 
 
 
-    <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+  <div *ngIf="displayName">
+    <h1 id="myName" class="fw-normal" style="color: red;">{{apiResults.name.first}} {{apiResults.name.last}}</h1>
   </div>
+
+  <div *ngIf="displayEmail">
+    <h4 id="myName" class="fw-normal">{{apiResults.email}}</h4>
+  </div>
+
+  <div *ngIf="displayBirthday">
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'short'}}, (Age: {{apiResults.dob.age}})</h5>
+    <!-- 1/4/91, 10:46 AM -->
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'long'}}, (Age: {{apiResults.dob.age}})</h5>
+    <!-- January 4, 1991 at 10:46:53 AM GMT+5 -->
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'medium'}}, (Age: {{apiResults.dob.age}})</h5>
+    <!-- Jan 4, 1991, 10:46:53 AM -->
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'shortDate'}}, (Age: {{apiResults.dob.age}})</h5>
+    <!-- 1/4/91 -->
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'mediumDate'}} | (Age: {{apiResults.dob.age}})</h5>
+    <!-- Jan 4, 1991 -->
+
+    <!-- <h5 id="myName" class="fw-normal">{{userBirthday}}, (Age: {{apiResults.dob.age}})</h5> -->
+  </div>
+
+  <div *ngIf="displayLocation">
+    <h5 id="myName" class="fw-normal">{{apiResults.location.city}}, {{apiResults.location.state}},
+      {{apiResults.location.country}}</h5>
+  </div>
+
 </div>

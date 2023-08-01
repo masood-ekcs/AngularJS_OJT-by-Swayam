@@ -1,0 +1,57 @@
+<nav class="navbar navbar-light bg-dark" style="margin-bottom: 20px;">
+  <div class="container-fluid ">
+    <h3> <a href="https://randomuser.me/" target="_blank" style="color: white;">Random User 2</a></h3>
+    <a class="btn btn-outline-secondary" href="https://randomuser.me/api" target="_blank">View details »</a>
+  </div>
+</nav>
+
+
+<div *ngFor="let apiResults of randomApiData" style="text-align: center;">
+
+  <!-- Show Image -->
+  <img [src]="apiResults.picture.large" style="margin: 20px auto; background-color: gray;"
+    class="bd-placeholder-img rounded-circle" width="300" height="300" alt="">
+  <br>
+
+  <!-- Buttons -->
+  <button [class]="nameButton ? 'btn btn-secondary' : 'btn btn-outline-secondary'" (click)="showHideName()">
+    {{nameButton ? 'Hide Name' : 'Show Name'}}</button>
+
+  <button [class]="emailButton ? 'btn btn-secondary' : 'btn btn-outline-secondary'" (click)="showHideEmail()">
+    {{emailButton ? "Hide Email" : "Show Email"}}</button>
+
+  <button [class]="birthdayButton ? 'btn btn-secondary' : 'btn btn-outline-secondary'" (click)="showHideBirthday()">
+    {{birthdayButton ? 'Hide Birthday' : 'Show Birthday'}}</button>
+
+  <button [class]="locationButton ? 'btn btn-secondary' : 'btn btn-outline-secondary'" (click)="showHideLocation()">
+    {{locationButton ? 'Hide Location' : 'Show Location'}}</button>
+
+  <br><br>
+
+
+
+  <!-- Display fields -->
+  <div *ngIf="displayName">
+    <h1 id="myName" class="fw-normal" style="color: red;">{{apiResults.name.first}} {{apiResults.name.last}}</h1>
+  </div>
+
+  <div *ngIf="displayEmail">
+    <h4 id="myName" class="fw-normal">{{apiResults.email}}</h4>
+  </div>
+
+  <div *ngIf="displayBirthday">
+    <!-- <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'short'}}, (Age: {{apiResults.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'long'}}, (Age: {{apiResults.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'medium'}}, (Age: {{apiResults.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'shortDate'}}, (Age: {{apiResults.dob.age}})</h5> -->
+    <h5 id="myName" class="fw-normal">{{apiResults.dob.date | date:'mediumDate'}} – (Age: {{apiResults.dob.age}})</h5>
+
+    <h5 id="myName" class="fw-normal">{{userBirthday}} | (Age: {{apiResults.dob.age}})</h5>
+  </div>
+
+  <div *ngIf="displayLocation">
+    <h5 id="myName" class="fw-normal">{{apiResults.location.city}}, {{apiResults.location.state}},
+      {{apiResults.location.country}}</h5>
+  </div>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="card card-body my-3">
+    <form>
+        <div class="form-group mb-3">
+            <input type="text" name="name" class="form-control" placeholder="Input your log" [(ngModel)]="inputLog">
+        </div>
+
+        <button [disabled]="!inputLog" type="text" class="btn btn-secondary" (click)="addLog()">Add Log</button>
+        &nbsp;
+        <button [hidden]="!inputLog" class="btn btn-warning" (click)="showClearLogButton()">Clear Log</button>
+
+        <button [disabled]="!inputLog" type="submit" class="btn btn-secondary float-end"
+            (click)="add2LocalStorage()">Add Log to Local Storage</button>
+    </form>
+</div>

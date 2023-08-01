@@ -1,0 +1,39 @@
+<h1 style="margin: 20px;">User Form</h1>
+<hr>
+<br>
+
+<!-- <form> -->
+<!-- we can create a function either on the Submit button or we can create a function on the Form tag -->
+<!-- $event capture/shows all the available methods in the console -->
+<form (submit)="sendDetails($event)" class="form1">
+
+  <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="email" name="name" id="myName" class="form-control" [(ngModel)]="userData.userName">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+
+    <!-- change the type to text if showPassWord is true, else change the type to password -->
+    <input [type]="showPassWord ? 'text' :'password'" name="pass" id="myPass" class="form-control"
+      [(ngModel)]="userData.password">
+  </div>
+
+  <!-- show/hide the showPassword button if showPassword is true/false. -->
+  <!-- the show() function will make the showPassWord boolean value to true/false -->
+  <button type="button" [hidden]="!userData.password" class="btn btn-warning btn-sm" (click)="show()">{{showPassWord ?
+    "Hide" : "Show"}}</button>
+
+  <!-- we can create a function either on the Submit button or we can create a function on the Form tag -->
+  <!-- <button type="submit" class="btn btn-primary" (click)="submitDetails()">Submit</button> -->
+
+  <button [disabled]="(!userData.userName || !userData.password)" type="submit" class="btn btn-primary float-end"
+    style="">Submit</button>
+
+</form>
+
+<!-- <div style="text-align: center; margin-top: 70px;">
+  <h3>{{userData.userName}}</h3>
+  <h4>{{userData.password}}</h4>
+</div> -->
