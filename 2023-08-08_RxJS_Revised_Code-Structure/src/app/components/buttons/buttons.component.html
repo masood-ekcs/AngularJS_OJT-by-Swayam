@@ -1,0 +1,13 @@
+<button type="submit" *ngIf="!updateStatus" [disabled]="!this.myService.userLog" class="btn btn-secondary"
+    (click)="addLogBtn()">Add Log</button>
+
+<!-- <button type="submit" class="btn btn-secondary" (click)="addLogBtn()">Add Log</button> -->
+
+<button *ngIf="updateStatus" class="btn btn-secondary" (click)="updateBtn()">Update Log</button>
+
+<button *ngIf="updateStatus" class="btn btn-info" (click)="cancelUpdateBtn()">Cancel Update</button>
+
+<button class="btn btn-warning" [hidden]="!this.myService.userLog" (click)="clearLogBtn()">Clear</button>
+
+<button class="btn btn-danger" style="float: right" [disabled]="!this.myService.userDb.length"
+    title="Clear Local Storage" (click)="clearLocalStorage()">Clear Local Storage</button>

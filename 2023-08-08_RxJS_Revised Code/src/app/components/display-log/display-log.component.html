@@ -1,0 +1,21 @@
+<!-- <div class="container" *ngFor=" let dataArray of LogsArray"> -->
+<div *ngFor=" let dataArray of LogsData">
+    <form class="card m-1">
+        <div class="m-1">
+            <table>
+                <tbody>
+                    <tr>
+                        <td style="width: 60%;"><a href="" (click)="onSelect(dataArray)"> {{dataArray.userInput}} </a>
+                        </td>
+                        <td style="width: 40%;">{{dataArray.date | date:'medium'}}</td>
+                        <!-- <td style="width: 40%;">{{dataArray.date}}</td> -->
+                        <td style="width: 10%; text-align: right;">
+                            <button class="btn btn-danger btn-sm" (click)="deleteLog()">x{{dataArray.id}}
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+</div>

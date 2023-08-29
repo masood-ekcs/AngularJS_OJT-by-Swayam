@@ -1,10 +1,30 @@
 <nav class="navbar navbar-light bg-dark" style="margin-bottom: 20px;">
   <div class="container-fluid ">
-    <h3> <a href="https://randomuser.me/" target="_blank" style="color: white;">Random User 2</a></h3>
+    <h3> <a href="https://randomuser.me/" target="_blank" style="color: white;">Random User 2</a>
+    </h3>
     <a class="btn btn-outline-secondary" href="https://randomuser.me/api" target="_blank">View details »</a>
   </div>
 </nav>
 
+<div>
+  <input type="radio" [(ngModel)]="selectedGender" name="gender" id="both" value="both" checked>
+  <label for="both">Both</label>
+  <input type="radio" [(ngModel)]="selectedGender" name="gender" id="male" value="male">
+  <label for="male">Male</label>
+  <input type="radio" [(ngModel)]="selectedGender" name="gender" id="female" value="female">
+  <label for="female">Female</label>
+</div>
+
+{{selectedGender}}
+
+<!-- <div>
+  <input type="radio" [defaultChecked]="true" name="gender" id="both" value="Both">
+  <label for="both">Both</label>
+  <input type="radio" name="gender" id="male" value="Male">
+  <label for="male">Male</label>
+  <input type="radio" name="gender" id="female" value="Female">
+  <label for="female">Female</label>
+</div> -->
 
 <div *ngFor="let apiResults of randomApiData" style="text-align: center;">
 
@@ -26,6 +46,7 @@
   <button [class]="locationButton ? 'btn btn-secondary' : 'btn btn-outline-secondary'" (click)="showHideLocation()">
     {{locationButton ? 'Hide Location' : 'Show Location'}}</button>
 
+  <button class="btn btn-danger" (click)="refresh()">Next Profile</button>
   <br><br>
 
 

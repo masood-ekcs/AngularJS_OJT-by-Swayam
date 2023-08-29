@@ -1,0 +1,36 @@
+<div class="m-5 w-5 ">
+    <h2 class="mb-5">Register New User
+        <h5>(Template Reference Form)</h5>
+    </h2>
+    <form #UserForm="ngForm" (ngSubmit)="registerUser(UserForm)">
+        <div class="mb-3">
+            <label for="userId" class="form-label">Email address</label>
+            <input ngModel required email type="email" class="form-control" name="userId">
+
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+
+            <input ngModel required minlength="8" type="password" class="form-control" name="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+
+
+            <span *ngIf="UserForm.controls['password']?.touched && UserForm.controls['password'].invalid">
+                Please enter a valid password. </span>
+
+            <div style="margin-top: 5px; font-size:small;">
+                <b>NOTE:</b>
+                <ul style="padding-left: 12px;">
+                    <li>Password must be at least 8 characters long.</li>
+                    <li>Password must contain at least one uppercase letter, one lowercase letter, one digit, and one
+                        special character.</li>
+                </ul>
+            </div>
+        </div>
+
+        <button [disabled]="UserForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+        <div style="font-size: small;">Already have an Account, go to <a routerLink="login">Login</a> page </div>
+    </form>
+
+</div>

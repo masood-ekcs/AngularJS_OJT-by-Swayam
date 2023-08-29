@@ -1,0 +1,31 @@
+<!-- Display fields -->
+<div *ngIf="this.myService.displayName">
+    <h1 id="myName" class="fw-normal" style="color: red;">{{randomOutput.name.first}} {{randomOutput.name.last}} <i
+            style="font-size: large; color: gray;">({{randomOutput.gender == 'female' ? 'she / her' : 'he / him'}})</i>
+    </h1>
+
+    <!-- <h1 id="myName" class="fw-normal" style="color: red;">{{randomOutput.name.first}} {{randomOutput.name.last}}<i
+            style="font-size: large; color: gray;">({{randomOutput.gender}})</i>
+    </h1> -->
+</div>
+
+<div *ngIf="this.myService.displayEmail">
+    <h4 id="myName" class="fw-normal">{{randomOutput.email}}</h4>
+</div>
+
+<div *ngIf="this.myService.displayBirthday">
+    <h5 id="myName" class="fw-normal">{{randomOutput.dob.date | date:'short'}} – (Age: {{randomOutput.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{randomOutput.dob.date | date:'long'}} – (Age: {{randomOutput.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{randomOutput.dob.date | date:'medium'}} – (Age: {{randomOutput.dob.age}})</h5>
+    <h5 id="myName" class="fw-normal">{{randomOutput.dob.date | date:'shortDate'}} – (Age: {{randomOutput.dob.age}})
+    </h5>
+    <h5 id="myName" class="fw-normal">{{randomOutput.dob.date | date:'mediumDate'}} – (Age: {{randomOutput.dob.age}})
+    </h5>
+    <!-- <h5 id="myName" class="fw-normal">{{this.myService.userBirthday}} | (Age: {{randomOutput.dob.age}})</h5> -->
+</div>
+
+<div *ngIf="this.myService.displayLocation">
+    <h5 id="myName" class="fw-normal">{{randomOutput.location.city}}, {{randomOutput.location.state}},
+        {{randomOutput.location.country}}</h5>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="m">
+
+    <input class="m-right5" type="radio" [(ngModel)]="selectedGender" name="gender" id="both" value="both" checked
+        (change)="onGenderChange()">
+    <label class="m-right10" for="both">Both</label>
+    <input class="m-right5" type="radio" [(ngModel)]="selectedGender" name="gender" id="male" value="male"
+        (change)="onGenderChange()">
+    <label class="m-right10" for="male">Male</label>
+    <input class="m-right5" type="radio" [(ngModel)]="selectedGender" name="gender" id="female" value="female"
+        (change)="onGenderChange()">
+    <label class="m-right10" for="female">Female</label>
+</div>

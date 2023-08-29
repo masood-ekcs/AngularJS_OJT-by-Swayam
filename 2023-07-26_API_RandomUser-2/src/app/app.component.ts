@@ -9,6 +9,7 @@ import { DataService } from './data.service';
 export class AppComponent implements OnInit {
   title = 'RandomUser-2';
   randomApiData: any = [];
+  selectedGender: string = 'both'; //default value for radio button
 
   // @Input() apiResults?: any;
 
@@ -31,12 +32,15 @@ export class AppComponent implements OnInit {
   }
 
   getData() {
-    this.myService.getDataFromRandomApi().subscribe((data) => {
-      this.randomApiData = data;
-      this.randomApiData = this.randomApiData.results;
-      // console.log(this.randomApiData);
-      // return this.randomApiData;
-    });
+    this.myService
+      .getDataFromRandomApi(this.selectedGender)
+      .subscribe((data) => {
+        console.log('gender', this.selectedGender);
+        this.randomApiData = data;
+        this.randomApiData = this.randomApiData.results;
+        // console.log(this.randomApiData);
+        // return this.randomApiData;
+      });
   }
 
   showHideName() {
@@ -64,5 +68,10 @@ export class AppComponent implements OnInit {
   showHideLocation() {
     this.displayLocation = !this.displayLocation;
     this.locationButton = !this.locationButton;
+  }
+
+  refresh() {
+    // window.location.reload();
+    this.getData(); // Refresh the data using the selected gender
   }
 }

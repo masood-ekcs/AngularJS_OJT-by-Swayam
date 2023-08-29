@@ -1,0 +1,67 @@
+<div class="m-5 w-5 ">
+    <h2 class="mb-5">Login Page
+        <h5>(Template Reference Form)</h5>
+    </h2>
+    <form #UserForm="ngForm" (ngSubmit)="submitData(UserForm)">
+        <div class="mb-3">
+            <label for="userId" class="form-label">Email address</label>
+
+            <!-- <input ngModel required email type="email" class="form-control" name="userId"> -->
+            <input ngModel required type="text" class="form-control" name="userId">
+
+            <span *ngIf="UserForm.controls['userId']?.touched && UserForm.controls['userId'].invalid">
+                Please enter a valid email ID</span>
+
+            <span *ngIf="this.validUser==false">No such Email ID found</span>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+
+            <input ngModel required minlength="8" type="password" class="form-control" name="password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+
+            <!-- <input ngModel required minlength="8" type="password" class="form-control" name="password"
+                [pattern]=passwordValidator> -->
+
+            <span *ngIf="UserForm.controls['password']?.touched && UserForm.controls['password'].invalid">
+                Please enter a valid password. </span>
+
+            <!-- <div style="margin-top: 5px; font-size:small;">
+                <b>NOTE:</b>
+                <ul style="padding-left: 12px;">
+                    <li>Password must be at least 8 characters long.</li>
+                    <li>Password must contain at least one uppercase letter, one lowercase letter, one digit, and one
+                        special character.</li>
+                </ul>
+            </div> -->
+        </div>
+
+        <button [disabled]="UserForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+        <div style="font-size: small;">Don't have an Account, <a routerLink="/">create</a> here </div>
+
+
+        <!-- <div style="float: right;">
+            <button [disabled]="UserForm.invalid" type="submit" class="btn btn-primary" (click)="showUsers()">Show Users
+                List</button>
+        </div> -->
+    </form>
+
+</div>
+
+
+<!-- ? :  unimportant/ignore -->
+<!-- pattern -- regex -->
+
+<!-- 
+    https://www.bezkoder.com/angular-12-template-driven-forms-validation/
+
+    https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
+
+    https://www.primefaces.org/primeflex/setup
+
+    https://www.primefaces.org/primeng-v15-lts/installation
+
+
+
+ -->

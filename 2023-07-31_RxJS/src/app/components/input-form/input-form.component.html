@@ -12,7 +12,10 @@
 
         <button [disabled]="!inputLog" type="submit" class="btn btn-secondary" (click)="addLog()">Add Log</button>
         &nbsp;
+
         <button [hidden]="!inputLog" class="btn btn-warning" (click)="showClearLogButton()">Clear Log</button>
+
+        <!-- <button (click)="sub()">Observe</button> -->
 
         <!-- This will reset all the input fields within the form -->
         <!-- <button type="reset" class="btn btn-warning">Clear Log</button> -->

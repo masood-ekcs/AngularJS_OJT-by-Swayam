@@ -1,0 +1,21 @@
+<div class="m-5 w-5 ">
+    <h2 class="mb-5">Login Page</h2>
+    <form #userform="ngForm" (ngSubmit)="submitData(userform)">
+        <div class="mb-3">
+            <label for="userId" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="userId" name="userId">
+        </div>
+        <div class="mb-3">
+            <label for="userPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="userPassword" name="userPassword">
+
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="loginBtn()">Submit</button>
+    </form>
+</div>
+
+
+
+<!-- <input type="email" class="form-control" name="userId" [(ngModel)]="userId" pInputText> -->
+<!-- <input type="password" class="form-control" name="userPassword" [(ngModel)]="userPassword"> -->
+<!-- <button type="submit" class="btn btn-primary" (click)="registerNewUser()">New User</button> -->

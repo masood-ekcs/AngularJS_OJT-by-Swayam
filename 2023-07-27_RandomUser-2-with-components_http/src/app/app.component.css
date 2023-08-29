@@ -1,0 +1,12 @@
+/* *{
+    margin: 5px 5px;
+} */
+
+h3 a{
+    text-decoration: none;
+}
+
+.btn-outline-secondary {
+    border-color: red;
+    
+}

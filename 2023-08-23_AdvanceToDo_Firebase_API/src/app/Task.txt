@@ -1,0 +1,6 @@
+Task
+
+1. Login form >> Validation for email, password
+2. Using the Template-Driven Reference form
+3. using Reactive-form as well
+4. On successful login, user will directed to a different page.

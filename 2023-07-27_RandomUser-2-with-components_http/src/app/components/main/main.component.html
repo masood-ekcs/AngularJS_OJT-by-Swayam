@@ -1,0 +1,28 @@
+<div style="text-align: center;">
+
+    <div *ngFor="let apiResults of this.myService.randomApiData">
+        <app-image-area [randomOutput]="apiResults"></app-image-area>
+    </div>
+
+    <app-radio-buttons></app-radio-buttons>
+
+    <div *ngFor="let apiResults of this.myService.randomApiData">
+        <app-buttons-area [randomOutput]="apiResults"></app-buttons-area>
+        <app-display-area [randomOutput]="apiResults"></app-display-area>
+    </div>
+</div>
+
+
+
+<!-- keeping the radio buttons within the *ngFor loop will refresh the radio buttons component as well, hence the user have to select the option after every page refresh -->
+<!-- <div style="text-align: center;">
+
+    <div *ngFor="let apiResults of this.myService.randomApiData">
+        <app-image-area [randomOutput]="apiResults"></app-image-area>
+
+        <app-radio-buttons></app-radio-buttons>
+
+        <app-buttons-area [randomOutput]="apiResults"></app-buttons-area>
+        <app-display-area [randomOutput]="apiResults"></app-display-area>
+    </div>
+</div> -->
