@@ -14,16 +14,18 @@
 
   <div class="mb-3">
     <label class="form-label">Password</label>
+    <div class="input-group input-border">
 
-    <!-- change the type to text if showPassWord is true, else change the type to password -->
-    <input [type]="showPassWord ? 'text' :'password'" name="pass" id="myPass" class="form-control"
-      [(ngModel)]="userData.password">
+      <!-- change the type to text if showPassWord is true, else change the type to password -->
+      <input [type]="showPassWord ? 'text' :'password'" name="pass" id="myPass" class="form-control"
+        [(ngModel)]="userData.password">
+      <!-- show/hide the showPassword button if showPassword is true/false. -->
+      <!-- the show() function will make the showPassWord boolean value to true/false -->
+      <button type="button" [hidden]="!userData.password" class="btn btn-warning btn-sm" (click)="show()">{{showPassWord
+        ? "Hide" : "Show"}}</button>
+    </div>
   </div>
 
-  <!-- show/hide the showPassword button if showPassword is true/false. -->
-  <!-- the show() function will make the showPassWord boolean value to true/false -->
-  <button type="button" [hidden]="!userData.password" class="btn btn-warning btn-sm" (click)="show()">{{showPassWord ?
-    "Hide" : "Show"}}</button>
 
   <!-- we can create a function either on the Submit button or we can create a function on the Form tag -->
   <!-- <button type="submit" class="btn btn-primary" (click)="submitDetails()">Submit</button> -->

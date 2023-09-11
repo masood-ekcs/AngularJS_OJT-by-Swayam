@@ -1,0 +1,45 @@
+@import "primeicons/primeicons.css";
+
+/* *{
+    color: darkslategray;
+}
+
+.form-control{
+    border: 1px solid darkslategray !important;
+}
+
+button{
+    background-color: darkslategray !important;
+    border: 1px solid darkslategray;
+    color: wheat;
+    width: 150px;
+}
+
+
+button:hover{
+    background-color: wheat !important;
+    color: darkslategray;
+
+}
+
+.mb-5{
+    border-bottom: 5px darkslategray solid !important;
+    padding-bottom: 10px;
+}
+
+span{
+    color: red;
+    font-size: small;
+} */
+
+/* .ng-invalid{
+    border: 5px solid red;
+} */
+
+input.ng-touched.ng-invalid{
+border: 2px solid red !important;
+}
+
+input.ng-dirty{
+    background-color: cornsilk !important;
+}

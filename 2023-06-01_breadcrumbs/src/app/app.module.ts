@@ -9,6 +9,9 @@ import { ContactComponent } from './contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { ResourcesComponent } from './resources/resources.component';
 import { ProductsComponent } from './products/products.component';
+import { ImportedComponent } from './imported/imported.component';
+import { AntiquesComponent } from './antiques/antiques.component';
+import { ItalianComponent } from './italian/italian.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { ProductsComponent } from './products/products.component';
     ContactComponent,
     ResourcesComponent,
     ProductsComponent,
+    ImportedComponent,
+    AntiquesComponent,
+    ItalianComponent,
   ],
   imports: [
     BrowserModule,

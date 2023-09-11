@@ -13,6 +13,9 @@
 <a [routerLink]="''">Home</a> |
 <a routerLink="/about">About</a> |
 <a routerLink="/products">Products</a> |
+<a routerLink="/products/imported">Imported Products</a> |
+<a [routerLink]="['/products', 'antiques']">Antiques Products</a> |
+<a [routerLink]="['/products', 'italian']">Italian Products</a> |
 <a [routerLink]="['/contact']">Contact</a> |
 <a [routerLink]="'/resources'">Resources</a>
 <br>
@@ -22,6 +25,8 @@
 
 <!-- <button (click)="prevPage()" *ngIf="prevButton">Previous</button>
 <button (click)="nextPage()" *ngIf="nextButton">Next</button> -->
+<br>
+<br>
 
 <!-- we'll now replace the prevButton and nextButton with the hasPrevious and hasNext functions -->
 <button (click)="prevPage()" *ngIf="hasPrevious()">Previous</button>

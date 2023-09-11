@@ -13,7 +13,16 @@ export class AppComponent {
   myUrl: number = 0;
   // prevButton = false; // not needed as we have used the boolean in the hasNext() function
   // nextButton = true; // not needed as we have used the boolean in the hasPrevious() function
-  myroutes = ['/', '/about', '/products', '/contact', '/resources'];
+  myroutes = [
+    '/',
+    '/about',
+    '/products',
+    '/products/imported',
+    '/antiques',
+    '/products/italian',
+    '/contact',
+    '/resources',
+  ];
 
   // // this will check if there's in front
   // hasNext(): boolean {
@@ -32,8 +41,10 @@ export class AppComponent {
 
   currentIndex() {
     // created a new function for the same code from the hasNext/hasPrevious functions.
-    const currentUrl = this.router.url; // this will capture the current url // Resources
+    const currentUrl = this.router.url; // this will capture the current url // Contact
+    // console.log('currentUrl ', currentUrl);
     const currentIndex = this.myroutes.findIndex((link) => link == currentUrl); // 3
+    // console.log('currentIndex ', currentIndex);
     return currentIndex; // 3
   }
 

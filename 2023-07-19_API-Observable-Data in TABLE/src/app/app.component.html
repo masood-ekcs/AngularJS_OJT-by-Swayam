@@ -25,30 +25,6 @@
 
 {{myID}}
 
-<!-- display selected -->
-<table class="table table-hover w-75 my-10 mx-auto">
-  <ng-container *ngIf="this.myID">
-    <thead>
-      <tr>
-        <th scope="col">User ID</th>
-        <th scope="col">ID</th>
-        <th scope="col">Title</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-  </ng-container>
-
-  <tbody *ngFor="let userArr of apiData">
-    <ng-container *ngIf="userArr.userId == this.myID">
-      <tr>
-        <th scope="row">{{userArr.userId}}</th>
-        <td>{{userArr.id}}</td>
-        <td>{{userArr.title}}</td>
-        <td>{{userArr.body}}</td>
-      </tr>
-    </ng-container>
-  </tbody>
-</table>
 
 <!-- display all -->
 <ng-container *ngIf="!this.myID">
@@ -73,6 +49,31 @@
   </table>
 </ng-container>
 
+
+<!-- display selected -->
+<table class="table table-hover w-75 my-10 mx-auto">
+  <ng-container *ngIf="this.myID">
+    <thead>
+      <tr>
+        <th scope="col">User ID</th>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+  </ng-container>
+
+  <tbody *ngFor="let userArr of apiData">
+    <ng-container *ngIf="userArr.userId == this.myID">
+      <tr>
+        <th scope="row">{{userArr.userId}}</th>
+        <td>{{userArr.id}}</td>
+        <td>{{userArr.title}}</td>
+        <td>{{userArr.body}}</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
 
 <br><br>
 

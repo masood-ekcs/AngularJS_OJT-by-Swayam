@@ -1,5 +1,5 @@
 .text-area{
-    width: 600px;
+    width: 80%;
     height: 400px;
     margin: 20px auto;
     padding: 20px;
@@ -12,4 +12,10 @@
 
 ::placeholder{
     color: white;
+}
+
+@media (min-width: 768px){
+    .text-area{
+        width: 700px;
+    }
 }

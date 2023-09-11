@@ -1,0 +1,21 @@
+<app-wrapper>
+
+    <div class="m-5 w-5 ">
+        <h2 class="mb-5">Users Details
+            <h5>(Sensitive data!)</h5>
+        </h2>
+        <ol>
+            <li *ngFor="let item of getUsers">
+                {{item.userId}}, {{item.password}}
+            </li>
+        </ol>
+        <div style="font-size: small;">Go to <a routerLink="/">HOME</a> / <a routerLink="login">LOGIN</a> page </div>
+
+    </div>
+
+    <div class="container" *ngIf="flag">
+        <!-- <app-table [myStoredData]="mySavedData"></app-table> -->
+        <app-table [myStoredData]="getUsers"></app-table>
+
+    </div>
+</app-wrapper>

@@ -1,0 +1,36 @@
+<!-- <app-wrapper> -->
+
+<div class="m-5 w-5 ">
+    <h2 class="mb-5">Page 404
+        <h5>(Page not found...)</h5>
+    </h2>
+
+    <button type="submit" class="btn btn-primary" routerLink="/">Home</button>
+
+</div>
+<!-- </app-wrapper> -->
+
+<app-wrapper>
+    <h3>Hello, this is Wrapper</h3>
+</app-wrapper>
+<br>
+
+<app-wrapper>
+    <app-table [myStoredData]="errorArray"></app-table>
+</app-wrapper>
+
+<br>
+<div>
+    <!-- <app-buttons><i class="pi pi-spin pi-cog" style="font-size: 2rem"></i>My Shared Button</app-buttons> -->
+    <app-buttons>My Shared Button</app-buttons>
+
+
+    <app-buttons [myClass]="'bg-success text-light'" [myIcon]="'pi pi-spin pi-cog'" (click)="printHello()">Say
+        Hello</app-buttons>
+
+    <app-buttons [myClass]="'bg-secondary text-light'" [myIcon]="'pi pi-user'">My secondary Button</app-buttons>
+
+    <app-buttons [myClass]="'bg-info text-dark'" [myIcon]="'pi pi-bookmark-fill'">My User Button</app-buttons>
+</div>
+
+<app-buttons [myStyles]="{color: 'blue'}">My Different Color Button with Style</app-buttons>

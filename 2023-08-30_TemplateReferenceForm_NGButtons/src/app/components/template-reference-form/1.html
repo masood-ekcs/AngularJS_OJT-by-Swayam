@@ -1,0 +1,14 @@
+<form #passwordForm="ngForm">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="password" #passwordInput="ngModel" required
+        minlength="8" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+
+    <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+        <div *ngIf="passwordInput.errors.required">Password is required.</div>
+        <div *ngIf="passwordInput.errors.minlength">Password must be at least 8 characters long.</div>
+        <div *ngIf="passwordInput.errors.pattern">Password must contain at least one uppercase letter, one lowercase
+            letter, one digit, and one special character.</div>
+    </div>
+
+    <button type="submit" [disabled]="passwordForm.invalid">Submit</button>
+</form>

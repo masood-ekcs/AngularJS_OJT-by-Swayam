@@ -1,21 +1,29 @@
-<div class="btnFlex">
-    <button class="btn btn-outline-danger btn-sm" (click)="capText()">Capitalize All Text</button>
+<div class="d-grid text-center">
+    <div>
+        <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="capText()">Capitalize All
+            Text</button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="lowerText()">Lower All Text</button>
+        <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="lowerText()">Lower All Text</button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="firstCharCap()">First Character Capital</button>
+        <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="firstCharCap()">First Character
+            Capital</button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="copyText()">Copy Text</button>
+        <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="copyText()">Copy Text</button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="pasteText()">Paste Text</button>
+        <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="pasteText()">Paste Text</button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="countCharLength()">Character Count
-        (+Spaces):{{this.serviceData.characterCount}}</button>
+        <div>
+            <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="countCharLength()">Character Count
+                (+Spaces): <span class="badge bg-primary">{{this.serviceData.characterCount}}</span></button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="countCharWithoutSpacesLength()">Character Count
-        (-Spaces):{{this.serviceData.characterCountWithoutSpaces}}</button>
+            <button class="btn btn-outline-danger btn-sm rounded-3 m-1"
+                (click)="countCharWithoutSpacesLength()">Character
+                Count
+                (-Spaces): <span
+                    class="badge bg-primary">{{this.serviceData.characterCountWithoutSpaces}}</span></button>
 
-    <button class="btn btn-outline-danger btn-sm" (click)="countWordLength()">Word
-        Count:{{this.serviceData.wordCount}}</button>
+            <button class="btn btn-outline-danger btn-sm rounded-3 m-1" (click)="countWordLength()">Word
+                Count: <span class="badge bg-primary">{{this.serviceData.wordCount}}</span></button>
+        </div>
 
-</div>
+    </div>

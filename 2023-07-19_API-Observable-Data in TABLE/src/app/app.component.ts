@@ -11,6 +11,8 @@ export class AppComponent {
   apiData: any = [];
   myID: any;
 
+  constructor(public myService: DataService) {}
+
   // search using the SEARCH button
   get(searchUserID: HTMLInputElement) {
     const mySearchedID = parseInt(searchUserID.value);
@@ -19,7 +21,6 @@ export class AppComponent {
     return false;
   }
 
-  constructor(public myService: DataService) {}
   logData() {
     this.myService.getDataFromApi().subscribe((data) => {
       this.apiData = data;

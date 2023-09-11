@@ -1,0 +1,18 @@
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">S.No.</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let array of mySavedData; let i = index">
+            <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{array.userId}}</td>
+                <td>{{array.password}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

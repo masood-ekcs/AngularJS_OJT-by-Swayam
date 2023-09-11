@@ -1,0 +1,21 @@
+<!-- <button class="btn btn-primary">
+    <ng-content></ng-content> -->
+<!-- My New Button -->
+<!-- </button> -->
+
+<!-- <button class="btn " ngClass={{myButtonColor}}>
+    <ng-content></ng-content>
+</button> -->
+
+<!-- <button class="btn d-flex align-items-center gap-2 m-1 p-3" [class]=myButtonColor> -->
+<!-- <i class="pi pi-spin pi-cog" style="font-size: 2rem"></i> -->
+<!-- <i [class]=myIcon style="font-size: 2rem"></i>
+    <ng-content></ng-content>
+</button> -->
+
+
+<button class="btn d-flex align-items-center gap-2 m-1 p-3" [class]=myClass [ngStyle]="myStyles"
+    style="font-size: 24px">
+    <i [class]=myIcon></i>
+    <ng-content></ng-content>
+</button>
