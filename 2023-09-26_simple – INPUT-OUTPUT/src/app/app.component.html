@@ -1,0 +1,15 @@
+<div *ngIf="this.alertMessageFromParentComponent">
+  <!-- 'alertMessageFromParentComponent' is passed to the child component as 'alertValue' -->
+  <app-alert [alertValue]="alertMessageFromParentComponent" [userData]="userDbFromParent"></app-alert>
+  <hr>
+</div>
+
+<!-- the 'userInput' from the child component is being called here as an $event -->
+<!-- ('userInputEmittedValue') is an event variable just like (click) -->
+<!-- the function 'getData' will capture the 'userInput' and store it in the 'userInputEmittedValue' variable -->
+<app-user-input-form (userInputEmittedValue)="getData($event)"></app-user-input-form>
+<hr>
+
+<!-- 'userInputEmittedValue' goes to 'userDbFromParent' -->
+<!-- 'userDbFromParent' is then sent to the Display component as 'userData' -->
+<app-display-form [userData]="userDbFromParent"></app-display-form>

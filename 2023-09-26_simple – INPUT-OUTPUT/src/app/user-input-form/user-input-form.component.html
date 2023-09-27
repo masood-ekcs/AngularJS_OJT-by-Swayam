@@ -1,0 +1,8 @@
+<h2>User Input Form</h2>
+
+<!-- #userInput will capture the input text from the user -->
+<h4>Enter User Input: <input type="text" #userInput></h4>
+
+<!-- 'addData' function will capture the 'userInput' value when the button is clicked -->
+<!-- The value is then emit to the parent app -->
+<button type="submit" (click)="addData(userInput.value)">Add Data</button>
