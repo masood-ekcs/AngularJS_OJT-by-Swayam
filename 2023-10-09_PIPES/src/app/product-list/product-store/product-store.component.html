@@ -1,0 +1,32 @@
+<h1>Products Store! – Child1</h1>
+
+
+<ul>
+    <!-- <li *ngFor="let product of products" (click)="productClick(product)">{{product.name}}</li> -->
+
+    <li *ngFor="let product of products" (click)="selectedProduct = product">{{product.name}}</li>
+
+</ul>
+
+
+<!-- {name,price} -->
+<app-product-details *ngIf="selectedProduct; else noProduct" [product]="selectedProduct"></app-product-details>
+
+<ng-template #noProduct>
+    <h3>There is no products selected</h3>
+</ng-template>
+
+
+<!-- <h1>{{randomItem.toUpperCase()}}</h1> -->
+<!-- pipe is faster -->
+<h1>{{randomItem | uppercase}}</h1> 
+<h1>{{randomItem | lowercase}}</h1>     
+<h1>{{randomItem | titlecase}}</h1>  
+<h1>{{4500 | currency:'USD'}}</h1>
+<h1>{{4500 | currency:'EUR'}}</h1>
+<h1>{{4500 | currency:'INR'}}</h1>
+
+<h1>{{date | date:'short'}}</h1>
+<h1>{{date | date:'medium'}}</h1>
+<h1>{{date | date:'long'}}</h1>
+

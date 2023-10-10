@@ -11,10 +11,11 @@ export class AppComponent {
   apiData: any = [];
   myID: any;
 
-  constructor(public myService: DataService) {}
+  constructor(public myService: DataService) { }
 
   // search using the SEARCH button
   get(searchUserID: HTMLInputElement) {
+    // get(searchUserID: any) {
     const mySearchedID = parseInt(searchUserID.value);
     // console.log(mySearchedID);
     this.myID = mySearchedID;

@@ -1,0 +1,2 @@
+1.		Append the new text to the Todo
+2.		Delete Todo if todo is clicked (not by button)

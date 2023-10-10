@@ -1,0 +1,12 @@
+<div *ngIf="this.checkValue">
+    <app-alert [checkValue]="checkValue"></app-alert>
+    <hr>
+</div>
+<app-user-input-form (db)="getData($event)"></app-user-input-form>
+<hr>
+<app-display-form [userData]="userDb"></app-display-form>
+
+
+<hr style="border: 3px solid black;">
+
+<!-- <router-outlet></router-outlet> -->

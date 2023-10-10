@@ -1,0 +1,10 @@
+<h2>This is the Display Component</h2>
+<h5>UserInput List.....</h5>
+
+<ul *ngFor="let userArray of userData">
+    <li>
+        UserInput: <b>{{userArray.task}}</b> &nbsp; | &nbsp; ID: <b>{{userArray.id}}</b>&nbsp;
+        <button class="btn btn-danger btn-sm" (click)="deleteID(userArray.id)"> X</button>
+
+    </li>
+</ul>
