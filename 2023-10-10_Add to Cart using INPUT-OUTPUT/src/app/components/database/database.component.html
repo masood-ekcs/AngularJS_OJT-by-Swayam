@@ -1,0 +1,23 @@
+<app-list [productList]="shampooDb"></app-list>
+<!-- <app-list [productList]="shampooDb" (itemSelected)="showDetails($event)"></app-list> -->
+
+
+
+
+
+
+
+<!-- 
+
+Parent -- >  Database component 
+Child -- >  List component (child of Database)
+Child of Child -- >  Details component (child of List)
+Child of Child of Child -- > Cart component (child of Details)
+
+
+
+App --- > Database --- > List --- > Details --- > Cart
+
+
+
+-->

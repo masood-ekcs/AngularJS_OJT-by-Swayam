@@ -1,0 +1,19 @@
+
+
+1) Main component – to display products
+        products[].name     – click --> show product details
+        Add to Cart button  - goes to cart component
+
+2) Product component – products database
+    Products[]:
+        Name
+        Price
+        Description
+        Qty
+
+3) Cart component
+        displays all add2Cart products
+            product name
+            Qty
+            total amount
+

@@ -1,0 +1,17 @@
+<h1>Page browsing, Process 2</h1>
+<h4>simple page increment/decrement by clicking the buttons</h4>
+<br>
+<h1> This is Page {{pageNum}}</h1>
+
+
+<button (click)="prevPage()" *ngIf="prevButton">Previous</button> &nbsp;
+<button (click)="nextPage()" *ngIf="nextButton">Next</button>
+
+
+<h4>{{pageNum}} / {{numberOfPages.length}}</h4>
+
+<h4>Total Pages: {{numberOfPages.length}}</h4>
+
+<small>
+    NOTE: Total number of pages is 6, the PREVIOUS & NEXT buttons will not be visible if page is not between 1 to 6.
+</small>

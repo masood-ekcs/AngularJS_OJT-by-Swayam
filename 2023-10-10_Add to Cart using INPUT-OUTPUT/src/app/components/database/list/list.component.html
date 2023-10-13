@@ -1,0 +1,7 @@
+<h1>Hamara Store</h1>
+<ul>
+    <li *ngFor="let productListArray of productList" (click)="showDetails = productListArray">{{productListArray.name}}
+    </li>
+</ul>
+
+<app-details *ngIf="showDetails" [productDetails]="showDetails"></app-details>

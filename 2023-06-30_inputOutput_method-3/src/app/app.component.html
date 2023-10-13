@@ -1,0 +1,25 @@
+<!-- Process 3 -->
+<!-- distribute the HTML in the respective components -->
+
+<!-- <app-form></app-form> -->
+<!-- AT MOMENT, WE'RE NOT SENDING/USING THE FORM COMPONENT -->
+
+<!-- <app-button></app-button> -->
+
+<!-- OR -->
+
+<!-- <app-button (addBtnClicked)="logConsole()"></app-button> -->
+
+<!-- OR -->
+
+<!-- (addBtnClicked) is an event Variable here, just like the click button -->
+<app-button (addBtnClicked)="logConsole()" (subBtnClicked)="subConsole()"></app-button>
+
+<!-- this is coming from the CHILD component.ts, i.e. BUTTON.COMPONENT.TS with the help of OUTPUT module and functions i.e.
+    addClick()
+    subClick()
+
+    @Output() addBtnClicked = new EventEmitter();
+    @Output() subBtnClicked = new EventEmitter();
+
+    and then it will call the logConsole function from the app.ts file -->

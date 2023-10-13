@@ -1,0 +1,16 @@
+<hr>
+<h1>Product Details</h1>
+<h3>{{productDetails.name}} &nbsp;
+    <button (click)="addToCart(productDetails)">Add to Cart</button>
+</h3>
+<ul>
+    <li>Cost: {{productDetails.price | currency: 'Rs. '}}</li>
+    <li>Quantity: {{productDetails.qty}}</li>
+    <li>Description:</li>
+    <ul>
+        <li *ngFor="let descArray of productDetails.description">{{descArray}}</li>
+    </ul>
+
+</ul>
+
+<!-- <app-cart *ngIf="productDetails" [addToCartProducts]="productDetails"></app-cart> -->

@@ -1,0 +1,12 @@
+<h1>Page browsing, Process 1</h1>
+<h4>simple page increment/decrement by clicking the buttons</h4>
+<br>
+<h1>{{pageNum}}</h1>
+
+
+<button (click)="prevPage()"> Previous </button> &nbsp;
+<button (click)="nextPage()"> Next </button>
+
+<h4>Total Pages: {{numberOfPages.length}}</h4>
+<small> NOTE: Total number of pages is 6, but the NEXT button will go beyond 6 and the Previous button will go below 0
+    as well.</small>

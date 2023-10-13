@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./display-form.component.css'],
 })
 export class DisplayFormComponent {
-  @Input() userData!: any;
+  @Input() userDataa!: any;
   @Output() idFromDisplay = new EventEmitter<any>();
   delID!: any;
 

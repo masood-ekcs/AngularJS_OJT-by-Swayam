@@ -1,0 +1,15 @@
+<!-- Creating s simple form to input two numbers and Add/Subtract them -->
+
+<!-- Process 1 -->
+Enter Num 1: <input type="number" #num1><br>
+Enter Num 2: <input type="number" #num2><br>
+<!-- #num1 – capture the values -->
+<!-- #num1 will always send the values as a String -->
+
+<button (click)="addNum1(num1.value, num2.value)"> + </button>
+<button (click)="subNum1(num1.value, num2.value)"> - </button>
+
+
+<!-- Process 2 -->
+<!-- <button (click)="addNum2(num1.value, num2.value)"> + </button>
+<button (click)="subNum2(num1.value, num2.value)"> - </button> -->

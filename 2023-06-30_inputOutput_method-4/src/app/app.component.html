@@ -1,0 +1,19 @@
+<!-- Process 4 -->
+
+<app-button (commonBtnClicked)="logConsole($event)"></app-button>
+<!-- the $event will capture the message/string from the buttons and pass it through -->
+
+<!-- (commonBtnClicked) is an event Variable which will capture the values from different buttons using $EVENT…
+
+<button (click)="btnClick('Add Btn Was Clicked')"> + </button>
+<button (click)="btnClick('Sub Btn Was Clicked')"> – </button> -->
+
+<!-- this is coming from the CHILD component.ts, i.e. BUTTON.COMPONENT.TS with the help of OUTPUT module and function i.e.
+    @Output() commonBtnClicked = new EventEmitter();
+
+  btnClick(msg: string) {
+    //this will capture the message from different buttons and emit it in the 'msg' variable
+    this.commonBtnClicked.emit(msg);
+  }
+
+    and then it will call the logConsole function from the app.ts file -->

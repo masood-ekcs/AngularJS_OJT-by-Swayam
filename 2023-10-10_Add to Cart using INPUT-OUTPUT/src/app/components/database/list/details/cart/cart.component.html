@@ -1,0 +1,7 @@
+<hr>
+<h1>Cart List</h1>
+<div *ngFor="let cartList of addToCartProducts">
+    <h4>Name: {{cartList.name}} | Quantity: {{cartList.qty}}</h4>
+    <h4>Description:</h4>
+    <li>{{cartList.description}}</li>
+</div>
