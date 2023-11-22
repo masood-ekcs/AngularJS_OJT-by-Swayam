@@ -44,8 +44,10 @@ export class DataService {
 
     for (var i = 0; i < space.length; i++) {
       var value = space[i];
+      console.log(value);
       var sum = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
       newArr.push(sum);
+      console.log(sum);
     }
     var finalValue = newArr.join(' ');
     // console.log(finalValue);

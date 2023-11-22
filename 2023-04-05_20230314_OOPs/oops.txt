@@ -1,4 +1,4 @@
-1. OOPs - Object Oriented Programming 
+  1. OOPs - Object Oriented Programming 
 Abhi tak jo hmne kiya that is called functional programming paradigm ->
 
 

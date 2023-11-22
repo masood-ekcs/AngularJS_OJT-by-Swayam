@@ -9,7 +9,7 @@
 <!-- the 'userInput' from the child component is being called here as an $event -->
 <!-- ('userInputEmittedValue') is an event variable just like (click) -->
 <!-- the function 'getData' will capture the 'userInput' and store it in the 'userInputEmittedValue' variable -->
-<app-user-input-form (userInputEmittedValue1)="getData($event)"></app-user-input-form>
+<app-user-input-form (userInputEmittedValue)="getData($event)"></app-user-input-form>
 <hr>
 
 <!-- 'userInputEmittedValue' goes to 'userDbFromParent' -->
