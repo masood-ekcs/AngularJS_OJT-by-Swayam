@@ -1,0 +1,22 @@
+-- Change detection
+
+1) When it happens?
+2) What Changes
+3) Are there any other methods for it.
+4) How many time does it runs.
+5) Change detection works on service?
+
+
+1) When it happes ->
+  a) click , keyup
+  b) setTimeOut , SetInterval
+  c) Http 
+
+2) What Changes ->
+    a) TS variables | Input() , Output() -> HTML view will be updated
+    b) If a variable value is changed -> HTML view will be updated
+    c) Angular change detection takes palce in service files as well but its not easy to predict ( so its always recommended to user subject / signals / Behaviour subject ) to reflect the Changes.
+
+    
+
+
