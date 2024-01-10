@@ -1,0 +1,65 @@
+**** Create an ecommerce application 
+
+#### User stories
+
+-> Home page
+    - multiple products to displayed.
+    - user should be able to add the products to the cart. 
+    - once the product is added hide the add to cart button and option to change quantity should be shown.
+
+-> Header 
+    - The cart count should be shown in the navbar
+
+-> Cart 
+    - User must be able to change the quantity.
+    - User must be able to remove item from cart.
+    - The calculation should be shown
+    - If user increases or decreases the quantity the amount should be updated
+
+--> Shared Component
+    - Qunatity Component
+
+*** Variables ( BehavSubject , Subject , Signals )
+
+ - items in cart ( Navbar )
+ - cart quantity ( Card )
+
+ ^^^ optional
+        - total is something that a controller needs to have.
+        - total can be also placed in service.
+
+// Rules of making an feature - 
+
+    -- what is feature ?
+        -> Just a part of application.
+    
+    -- while creating a feature we need to think about the following -
+        1. UI 
+        2. Controller ( things that are written inside of the .ts)
+        3. Model 
+    
+    -- while structuring we need to think of components
+        1. Smart and Dumb components.
+        2. Module
+        3. Data structuring -> [{ {[]}}] array[0].name.array[0]
+        4. Services -> things related to API's ( we use it to write all the methods for accessing or updating the files)
+
+    -- Data flow - TOP DOWN
+        --> Services - 2 ( not api ) | 10 signal | Subject & BehavSubject - Signals 
+            - Functions (ex - getData , removeItem )
+            - Subject & BehavSubject - Signals is used to share common data to multiple components and update them at same time.
+        --> We call Service functions in our smart components.
+        --> Once we get value in our smart components using input and output we send them in dumb components.
+
+    -- Always follow type safety meaning where ever required you need to have interfaces ready. Mandatory to use the data types and return type
+
+
+
+** Smart Component (product/card) JS **
+    - service.addToCart()
+    - service.changeQunatity()
+
+*** HTML 
+    div 
+        <dumb></dumb>
+    

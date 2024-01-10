@@ -1,0 +1,58 @@
+<div style="display: flex; justify-content: space-between;">
+
+    <ul>
+        <li *ngFor="let size of sizes; index as i" (click)="showData(i)">{{size}}</li>
+    </ul>
+
+    <input type="file" (change)="changeImage($event)">
+
+
+
+    <div id="fields">
+        @for (el of editableFields()[currentIndex()]; track $index) {
+        <!-- @if (el.type == "txt") { -->
+        <div>
+            <label>{{el.htmlTxt}}</label>
+            <button (click)="link()">link</button><button (click)="unlink()">Unlink</button><input type="text"
+                [value]="el.value" [(ngModel)]="el.value" (ngModelChange)="changeTxt(el, 'true')">
+            <input id="style1" type="color" [value]="el.color" [(ngModel)]="el.color"
+                (ngModelChange)="changeColor(el, 'true')">
+            <input type="number" [value]="el.fontSize" [(ngModel)]="el.fontSize"
+                (ngModelChange)="changeFontSize(el, 'true')">
+            <input id="style1" type="color" [value]="el.backgroundColor" [(ngModel)]="el.backgroundColor"
+                (ngModelChange)="changeBgColor(el, 'true')">
+            <select [(ngModel)]="el.fontFamily" (ngModelChange)="changeFontFamily(el, 'true')">
+                <option *ngFor="let i of fontFamilyList" [value]="i">{{i}}</option>
+            </select>
+
+
+        </div>
+        <!-- }@else if (el.type == "btn") { -->
+        <!-- <div>
+                    <label>{{el.htmlTxt}}</label>
+                    <button (click)="link()">link</button><button (click)="unlink()">Unlink</button><input type="text"
+                        [value]="el.value" [(ngModel)]="el.value" (ngModelChange)="changeTxt(el)">
+                    <input id="style1" type="color" [value]="el.color" [(ngModel)]="el.color" (ngModelChange)="changeColor(el)">
+                    <input type="number" [value]="el.fontSize" [(ngModel)]="el.fontSize" (ngModelChange)="changeFontSize(el)">
+                    <input id="style1" type="color" [value]="el.backgroundColor" [(ngModel)]="el.backgroundColor"
+                        (ngModelChange)="changeBgColor(el)">
+                    <select [(ngModel)]="el.fontFamily" (ngModelChange)="changeFontFamily(el)">
+                        <option *ngFor="let i of fontFamilyList" [value]="i">{{i}}</option>
+                    </select>
+                    <input type="text" [value]="el.href" placeholder="Hi" [(ngModel)]="el.href" (ngModelChange)="changeFontSize(el)">
+                   
+        
+                </div>
+            }
+         -->
+        }
+
+<<<<<<< HEAD
+        <iframe width="920" height="620" (load)="onIframeLoad(myFrame)" [src]="sanitized[currentIndex]"
+            #myFrame></iframe>
+=======
+        <iframe width="900" height="600"  [src]="sanitized[currentIndex()]"
+           id="iframeM" #myFrame></iframe>
+>>>>>>> 2683e352cef2bb38567772fe1d61821e80aaee02
+    </div>
+</div>

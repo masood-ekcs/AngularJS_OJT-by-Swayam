@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="left-container">
+        <app-cart-header [title]="cartData.title" [ratings]="cartData.rating"></app-cart-header>
+        <app-cart-main [image]="cartData.image"></app-cart-main>
+    </div>
+    <div class="right-container">
+        <h3>{{cartData.price| currency:"USD"}}</h3>
+
+        <app-quantity [availableQuantity]="cartData.availableQuantity" [purchaseQuantity]="cartData.purchaseQuantity"
+            [id]="cartData.id"></app-quantity>
+
+        <app-cart-footer></app-cart-footer>
+
+
+    </div>
+
+
+</div>

@@ -1,0 +1,10 @@
+<main class="products-container">
+    <div class="cart">
+        <section>
+            <app-cart-item *ngFor="let product of cartDB" [cartData]="product"></app-cart-item>
+        </section>
+        <app-cart-total></app-cart-total>
+
+
+    </div>
+</main>

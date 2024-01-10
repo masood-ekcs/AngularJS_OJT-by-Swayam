@@ -1,0 +1,14 @@
+<!-- <app-link [link]="'home'"></app-link>
+<app-logo></app-logo> -->
+<nav class="navbar">
+    <a routerLink=""><app-logo ></app-logo></a>
+    <ul class="links">
+        <app-link></app-link>
+        <app-link></app-link>
+        <a routerLink="cart" class="cart">
+            <!-- <app-icon ></app-icon><span class="cart-count">{{count()}}</span> -->
+            <app-icon ></app-icon><span class="cart-count">{{count}}</span>
+        </a>
+        
+    </ul>
+</nav>

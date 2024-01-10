@@ -1,0 +1,15 @@
+.products-container{
+    padding: 20px 80px;
+    background-color: rgb(252, 252, 252);
+}
+
+
+.btn{
+    margin:10px;
+}
+
+.total{
+    padding: 10px;
+    line-height: 2;
+}
+

@@ -1,0 +1,18 @@
+.header {
+    padding: 10px;
+  }
+  
+  .price{
+    margin: 5px 0;
+  }
+  
+  .ratings {
+      display: flex;
+  }
+  
+  .rating {
+    list-style-type: none;
+  }
+  
+  
+  
