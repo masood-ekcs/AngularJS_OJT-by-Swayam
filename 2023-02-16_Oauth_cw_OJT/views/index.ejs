@@ -1,0 +1,31 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <% if(authorized){ %>
+        <a href="/logout">Logout</a>
+        <% if(user){%>
+            <h1>Name: <%= user.name %>
+            </h1>
+            <h1>Email: <%= user.email %>
+            </h1>
+            <img src="<%=user.picture%>">
+            <%if(user.email_verified){%>
+                <h1>Your email is verified</h1>
+                <%}else{%>
+                    <h1>Your email is not verified</h1>
+                    <%}%>
+
+
+
+
+                        <%}%>
+                            <%} else {%>
+                                <a href="/login">Login</a>
+                                <%}%>
+
+</body>
+
+</html>

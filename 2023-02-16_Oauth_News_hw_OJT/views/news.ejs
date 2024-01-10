@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./head.ejs') %>
+</head>
+
+<body>
+    <%- include('./components/header.ejs') %>
+
+        <h1 style="margin-left: 25px; margin-top: 25px;">Today's News</h1>
+
+        <div class="container" style="margin-top: 20px;">
+            <div class=" row row-cols-sm-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 g-3">
+                <!-- g-3 adds a gutter of 3px -->
+
+                <% for(let i=0; i<news.length; i++) { %>
+                    <% if(!news[i].urlToImage){%> <!--see the exclamation mark for (not) -->
+                        <% continue %> <!--if there's no image, in the news, then it will go to th next news.-->
+                            <%} %>
+
+                                <div class="col">
+                                    <div class="card shadow-sm" style="background-color:whitesmoke;">
+
+                                        <img src="<%=news[i].urlToImage %>">
+
+                                        <div class="card-body">
+                                            <h6 class="card-text strong">
+                                                <%=news[i].title %>
+                                            </h6>
+
+                                            <p class="card-text" style="line-height: 1.2;">
+                                                <small>
+                                                    <%=news[i].description %>
+                                                </small>
+                                            </p>
+
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <a target="/" class="btn btn-secondary"
+                                                    href="<%=news[i].url%>"><small>Read
+                                                        More »</small></a>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <% } %>
+
+            </div>
+        </div>
+
+
+
+
+        <%- include('./components/footer.ejs') %>
+</body>
+
+</html>

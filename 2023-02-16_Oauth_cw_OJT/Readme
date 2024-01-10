@@ -1,0 +1,3 @@
+// Auth0 - Authentication and Authorization service provider company
+// 1. Hmko apne level pe user ki identity ko store krke rakhne ki jarurat nahi. Toh user ki identity Auth0 ke server pe hog
+// 2. Auth0 internally OAuth ka implementation hai. Oauth ke through applciations limited scope mein user ki identity share krte hai

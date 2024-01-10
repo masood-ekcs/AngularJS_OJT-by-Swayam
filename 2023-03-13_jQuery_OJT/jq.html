@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js">
+    </script>
+    <style>
+        .a {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+
+
+        .b {
+            height: 400px;
+            width: 400px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        Hello my name is Ayush
+        <h2>
+            Soloo Soloo
+            <strong>
+                Kem zCho
+            </strong>
+        </h2>
+    </div>
+
+    <input id="ayush" value="testing">
+    <a href="www.gooogle.com">Google</a>
+    <button> Hello 1</button>
+    <div id="lol" class="a"></div>
+    <script>
+        $(document).ready(function () {
+
+            let a = $("div").text()
+            console.log(a)
+
+
+            let b = $("div").html()
+            console.log(b)
+
+
+            let c = $("#ayush").val()
+            console.log(c)
+
+
+            let d = $("a").attr("href")
+            console.log(d)
+
+
+            $("button").click(function () {
+                $(this).text("Balle Balle")
+            })
+
+
+
+            $("a").attr("target", "_blank")
+
+
+
+            $("#lol").mouseover(function () {
+                $(this).removeClass("a")
+                $(this).addClass("b")
+            })
+
+            $("#lol").mouseleave(function () {
+                $(this).removeClass("b")
+                $(this).addClass("a")
+            })
+
+
+
+            $.get("https://history.muffinlabs.com/date", function (data, status) {
+                console.log(data)
+                console.log(status)
+            })
+
+
+            $.post("https://history.muffinlabs.com/date", {
+
+                name: "Ayush",
+                age: 23
+
+
+            },
+                function (data, status) {
+                    console.log(data)
+                    console.log(status)
+                })
+
+
+        })
+    </script>
+
+</body>
+
+</html>

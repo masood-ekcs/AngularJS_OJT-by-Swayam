@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./head.ejs') %>
+</head>
+
+<body>
+    <%- include('./components/header.ejs') %>
+        <br>
+        <h1 style="margin-left: 25px;">Login Page</h1><br>
+        <div style="display: block; margin: auto; height: auto; width: 700px;">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div><br>
+            <button onclick="login()" class="btn btn-primary">Log in</button>
+
+        </div>
+
+        <%- include('./components/footer.ejs') %>
+
+            <script>
+
+                function isValidEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+
+                function login() {
+                    let email = document.getElementById("exampleInputEmail1").value
+                    let password = document.getElementById("exampleInputPassword1").value
+                    if (email == "" || password == "") {
+                        alert("Please enter both email and password")
+                        return;
+                    }
+
+                    if (!isValidEmail(email)) {
+                        alert("Please enter valid email")
+                        return
+                    }
+
+                    fetch("/login", {
+                        method: "POST",
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email, password })
+                    }).then((res) => {
+                        return res.json()
+                    }).then((f_res) => {
+                        // alert(f_res.message)
+
+                        if (f_res.code) {
+                            window.location.href = "/news"
+                        }
+                        else {
+                            alert(f_res.message)
+                        }
+                    })
+                }
+
+            </script>
+</body>
+
+</html>

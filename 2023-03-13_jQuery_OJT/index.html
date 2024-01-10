@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+    <div id="ayush" style="margin-top: 50px;">
+        <h3>Hello, Hi my name is Ayush</h3>
+    </div>
+    <div id="test"></div>
+    <button class="a">Button1</button>
+    <button class="b">Button2</button>
+    <button class="c">Button3</button><br><br>
+    <div class="masood"> Balle Balle Sawa Sawa</div><br>
+    <div style="position:absolute;background-color: red; height: 200px; width: 200px;" class="redBox"></div>
+
+
+
+    <script>
+        // Jquery statement ka 3 part hota hai, pehla part hota hai $ - Selector
+        // 2 part - query
+        // 3 action - 
+        // Pure javascript agar aap use krte ho, to kisi bhi element ki select krte ho,
+        // document.getElementByClassName // document.getElementByTagName, toh ye bs pehle milne wale element ko select krta hai
+        // Jquery mein jo selector query hoti hai wo saare matching ko select kr lete hai
+
+
+
+        // Jquery mein agar aapko ek element ko select krna hai particularly bahut saare class ho
+        // Saare elements chahiye - *
+        // Mujhe wo saare p elements chahiye jiske andar masood class ho p.masood
+        // Aapko ek specific attribute wala element select krna hai toh 
+        // Mujhe waisey saare anchor tags chahiye jiska href www.google.com ho - 
+        //  a[href='www.google.com']
+
+
+
+        /*
+
+        $("a[href='www.google.com']").click(function(){
+            alert("Masood")
+        })
+        
+
+        // Mujhe ek unordered list mein se pehla li element nikalna hai
+        "ul li:first"
+
+
+
+       Mouse Events - click, dblclick, mouseenter, mouseleave 
+       Keyboard Events - keypress, keyup, keydown
+       Form Events - submit, change, focus
+       Document/Window events - resize, load, scroll, unload
+
+
+
+
+       $(document).keydown(function(event){       
+       })
+
+        */
+
+
+        $(document).ready(function () {
+
+
+            // This is an example of multiple class selector
+            // $(".a, .c").click(function (event) {
+            //     console.log(event)
+            //     $("#ayush").hide()
+            // })
+
+
+            // $(".b").click(function () {
+            //     $("#ayush").show()
+            // })
+
+            // $(".c").click(function () {
+            //     $("#ayush").hide()
+            // })
+
+
+            // this refers to the caller itself and get passed as hidden parameter
+            // $(".masood").mouseenter(function () {
+            //     $(this).hide(1000)
+            // })
+            // $(".masood").mouseleave(function () {
+            //     $(this).show(500)
+            // })
+
+
+            // toggle() action is used to show and hide element
+            // Fading Actions
+            /*
+            fadeIn()
+            fadeOut()
+            fadeToggle()
+            fadeTo()
+            */
+
+            // Sliding Actions
+            /*
+             slideDown()
+             slideUp()
+             slideToggle() 
+            */
+
+
+            $(".redBox").click(() => {
+                $(".redBox").animate({ left: '300px' })
+            })
+
+
+
+            $("div").click(function () {
+                $(this).hide(function () {
+
+                })
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
